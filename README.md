@@ -2,7 +2,7 @@
 
 Turn ugly hashes into icons
 
-[![Travis build status](http://img.shields.io/travis/Raedslab/iconify-hashes-js.svg?style=flat)](https://travis-ci.org/Raedslab/iconify-hashes-js)
+[![Build Status](https://travis-ci.org/RaedsLab/iconify-hashes-js.svg?branch=master)](https://travis-ci.org/RaedsLab/iconify-hashes-js)
 [![Dependency Status](https://david-dm.org/Raedslab/iconify-hashes-js.svg)](https://david-dm.org/Raedslab/iconify-hashes-js)
 [![devDependency Status](https://david-dm.org/Raedslab/iconify-hashes-js/dev-status.svg)](https://david-dm.org/Raedslab/iconify-hashes-js#info=devDependencies)
 
