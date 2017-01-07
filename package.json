@@ -15,7 +15,11 @@
     "type": "git",
     "url": "https://github.com/Raedslab/iconify-hashes-js.git"
   },
-  "keywords": [],
+  "keywords": [
+    "icon",
+    "hash",
+    "iconify"
+  ],
   "author": "Raed Chammam <raed.chammam@gmail.com>",
   "license": "MIT",
   "bugs": {
