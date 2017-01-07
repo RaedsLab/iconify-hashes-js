@@ -1,10 +1,21 @@
-# iconify-hashes-js
+# Iconify your hashes
 
-Turn hashes into icons
+Turn ugly hashes into icons
 
 [![Travis build status](http://img.shields.io/travis/Raedslab/iconify-hashes-js.svg?style=flat)](https://travis-ci.org/Raedslab/iconify-hashes-js)
 [![Dependency Status](https://david-dm.org/Raedslab/iconify-hashes-js.svg)](https://david-dm.org/Raedslab/iconify-hashes-js)
 [![devDependency Status](https://david-dm.org/Raedslab/iconify-hashes-js/dev-status.svg)](https://david-dm.org/Raedslab/iconify-hashes-js#info=devDependencies)
+
+## Why ?
+
++ 1 - It is much simpler to compare colorful icons than long hashes.
+
++ 2- This is mainly used for <em>over the phone</em> transmission of hashes.
+
+
+## Demo
+
+
 
 
 ## How it works ?

@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <title>Browser demo</title>
     <link rel="stylesheet" href="../ressources/inconify.css">
+    <style>
+        p {
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
+<p>
+    479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041
+</p>
 <div id="output">
 </div>
 
 <script src="../dist/iconify-hashes-js.js"></script>
 <script>
     const out = document.querySelector('#output');
-    const icons = iconify.getIcons('testing');
+    const icons = iconify.getIcons('479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041');
     out.innerHTML = icons;
     console.table(icons);
 </script>
