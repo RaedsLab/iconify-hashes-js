@@ -15,7 +15,7 @@ Turn ugly hashes into icons
 
 ## Demo
 
-
+You can test a working demo here: [https://raedslab.github.io/iconify-hashes-js/](https://raedslab.github.io/iconify-hashes-js/)
 
 ![demo](https://raw.githubusercontent.com/RaedsLab/iconify-hashes-js/master/demo/sha_vs_iconify.png)
 
