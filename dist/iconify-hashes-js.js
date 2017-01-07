@@ -70,96 +70,75 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	  /**
-	   * Returns a color when given a number
-	   * @param {String} number
+	   * Returns a color when given a letter
+	   * @param {String} hex
 	   * @returns {name, code}
 	   */
-	  getColor: function getColor(number) {
+	  getColor: function getColor(hex) {
 	
-	    if (number == undefined || number === '') {
+	    if (hex == null) {
 	      return {
 	        'name': 'black',
 	        'code': '#000000'
 	      };
 	    }
 	
-	    var colors = [{
-	      'name': 'grey',
-	      'code': '#9e9e9e'
-	    }, {
-	      'name': 'blue',
-	      'code': '#1a237e'
-	    }, {
-	      'name': 'green',
-	      'code': '#4caf50'
-	    }, {
-	      'name': 'yellow',
-	      'code': '#ffeb3b'
-	    }, {
-	      'name': 'orange',
-	      'code': '#ff9800'
-	    }, {
-	      'name': 'red',
-	      'code': '#f40a02'
-	    }, {
-	      'name': 'purple',
-	      'code': '#9c27b0'
-	    }, {
-	      'name': 'light-blue',
-	      'code': '#03a9f4'
-	    }, {
-	      'name': 'pink',
-	      'code': '#ff206d'
-	    }, {
-	      'name': 'brown',
-	      'code': '#8B4513'
-	    }];
+	    var colors = {
+	      a: {
+	        'name': 'pink',
+	        'code': '#ff206d'
+	      },
+	      b: {
+	        'name': 'blue',
+	        'code': '#1a237e'
+	      },
+	      c: {
+	        'name': 'green',
+	        'code': '#4caf50'
+	      },
+	      d: {
+	        'name': 'yellow',
+	        'code': '#ffeb3b'
+	      },
+	      e: {
+	        'name': 'orange',
+	        'code': '#ff9800'
+	      },
+	      f: {
+	        'name': 'red',
+	        'code': '#f40a02'
+	      }
+	    };
 	
-	    return colors[parseInt(number)];
+	    return colors[hex];
 	  },
 	
 	
 	  /**
 	   * Returns a shape when given a letter
-	   * @param {String} letter
+	   * @param {String} number
 	   * @returns {String}
 	   */
-	  getForm: function getForm(letter) {
+	  getForm: function getForm(number) {
 	
-	    if (letter == null || letter === '') {
+	    if (number == null || number === '') {
 	      return 'stop';
 	    }
 	
 	    var shapes = {
-	      a: 'camera',
-	      b: 'cloud',
-	      c: 'eye',
-	      d: 'flag',
-	      e: 'heart',
-	      f: 'home',
-	      g: 'leaf',
-	      h: 'lock',
-	      i: 'road',
-	      j: 'key',
-	      k: 'pencil',
-	      l: 'flight',
-	      m: 'star',
-	      n: 'truck',
-	      o: 'coffee',
-	      p: 'bomb',
-	      q: 'cab',
-	      r: 'soccer-ball',
-	      s: 'birthday',
-	      t: 'bicycle',
-	      u: 'bed',
-	      v: 'male',
-	      w: 'down-big',
-	      x: 'left-big',
-	      y: 'right-big',
-	      z: 'up-big'
+	      0: 'star',
+	      1: 'cloud',
+	      2: 'eye',
+	      3: 'coffee',
+	      4: 'heart',
+	      5: 'home',
+	      6: 'leaf',
+	      7: 'lock',
+	      8: 'road',
+	      9: 'key'
 	    };
 	
-	    return shapes[letter];
+	    return shapes[number];
 	  },
 	
 	
@@ -196,20 +175,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var next = hashArray[i + 1];
 	      var symbol = {};
 	
+	      // number (form) | hex (color)
 	      if (next != null) {
-	        // alphabet | number
-	        if (current.match(/[a-z]/i) && next.match(/[0-9]/i)) {
+	        if (current.match(/[0-9]/i) && next.match(/[a-z]/i)) {
 	          symbol = {
 	            form: this.getForm(current),
 	            color: this.getColor(next).name
 	          };
-	
 	          i = i + 2;
 	        }
 	      }
 	
-	      // alphabet | alphabet (or last)
-	      if (current.match(/[a-z]/i) && (next == null || next.match(/[a-z]/i))) {
+	      // number (color) | number (color) or last
+	      if (current.match(/[0-9]/i) && (next == null || next.match(/[0-9]/i))) {
 	        symbol = {
 	          form: this.getForm(current),
 	          color: this.getColor().name
@@ -217,8 +195,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        i++;
 	      }
 	
-	      // number | whatever
-	      if (current.match(/[0-9]/i)) {
+	      // hex | whatever
+	      if (current.match(/[a-z]/i)) {
 	        symbol = {
 	          form: this.getForm(),
 	          color: this.getColor(current).name
