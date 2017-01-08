@@ -39,3 +39,60 @@ The version 1.0 works like the following:
 + If a number is found, it gets replaced by an icon from font-awesome.
 + If it is followed by [a-f] it is colored.
 + If an [a-f] is not preceded by an icon, it colors a square.
+
+
+### Proposed spec
+
+I have managed to extract 30 icons from [fontawesome.io](http://fontawesome.io/) using [fontello](http://fontello.com/).
+
+These 30 icons should be simple enough so that they can be transmitted orally in different languages without confusion.
+
+![icons](https://raw.githubusercontent.com/RaedsLab/iconify-hashes-js/master/demo/icons.png)
+
+From these 30, 10 has been selected to represent numbers from 0 to 9, like the following. 
+
+```
+0: 'star'
+1: 'cloud'
+2: 'eye'
+3: 'coffee'
+4: 'heart'
+5: 'home'
+6: 'leaf'
+7: 'lock'
+8: 'road'
+9: 'key'
+```
+The absence of shape is represented by a square `stop`
+
+
+Colors represent letters from A to F.
+
+```js
+      a: {
+        'name': 'pink',
+        'code': '#ff206d'
+      },
+      b: {
+        'name': 'blue',
+        'code': '#1a237e'
+      },
+      c: {
+        'name': 'green',
+        'code': '#4caf50'
+      },
+      d: {
+        'name': 'yellow',
+        'code': '#ffeb3b'
+      },
+      e: {
+        'name': 'orange',
+        'code': '#ff9800'
+      },
+      f: {
+        'name': 'red',
+        'code': '#f40a02'
+      }
+```
+
+The absence of color is represented by `black #000000`.
