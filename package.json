@@ -9,7 +9,8 @@
     "test-browser": "gulp test-browser",
     "watch": "gulp watch",
     "build": "gulp build",
-    "coverage": "gulp coverage"
+    "coverage": "gulp coverage",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,8 @@
     "babel-polyfill": "6.13.0",
     "babel-preset-latest": "6.14.0",
     "babel-register": "6.14.0",
-    "chai": "3.5.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
     "del": "2.2.2",
     "glob": "7.0.6",
     "gulp": "3.9.1",
@@ -47,8 +49,9 @@
     "gulp-sourcemaps": "1.6.0",
     "gulp-uglify": "2.0.0",
     "isparta": "4.0.0",
+    "istanbul": "^0.4.5",
     "json-loader": "0.5.4",
-    "mocha": "3.0.2",
+    "mocha": "^3.0.2",
     "sinon": "1.17.5",
     "sinon-chai": "2.8.0",
     "webpack": "1.13.2",

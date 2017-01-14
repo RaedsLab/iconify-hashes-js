@@ -5,6 +5,7 @@ Turn ugly hashes into icons
 [![Build Status](https://travis-ci.org/RaedsLab/iconify-hashes-js.svg?branch=master)](https://travis-ci.org/RaedsLab/iconify-hashes-js)
 [![Dependency Status](https://david-dm.org/Raedslab/iconify-hashes-js.svg)](https://david-dm.org/Raedslab/iconify-hashes-js)
 [![devDependency Status](https://david-dm.org/Raedslab/iconify-hashes-js/dev-status.svg)](https://david-dm.org/Raedslab/iconify-hashes-js#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/github/RaedsLab/iconify-hashes-js/badge.svg?branch=master)](https://coveralls.io/github/RaedsLab/iconify-hashes-js?branch=master)
 
 ## Why ?
 
