@@ -628,6 +628,22 @@
         .type-csharp .highlight .sc {
             color: #A31515
         }
+
+        #input {
+            width: 95%;
+            height: 3vh;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .example {
+            color: #0b97c4;
+            cursor: pointer;
+        }
+
+        .example:hover {
+            text-decoration: underline;
+        }
     </style>
     <meta name="viewport" content="width=device-width">
 
@@ -656,16 +672,19 @@
         <h1>Turn ugly hashes into beautiful icons</h1>
 
         <h2>Demo</h2>
-        <p>
-            <input id="input" type="text">
-            <button id="btnSubmit">Submit</button>
-        <div id="output"></div>
-        </p>
+        <div>
+            <p><b>Examples:</b></p>
 
+            <div class="example">027a0c725d030596b1e73ff5931aa0ab</div>
+            <div class="example">479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041</div>
+            <div class="example">8vxYfAWCXe0Hm4gNX8nzwuqWNukOkcMJ1a9G2tD71ipotEZ9f80Vu</div>
 
+            <input title="input" id="input" type="text">
+            <div id="output"></div>
+        </div>
+        <hr>
         <h2>How to use this?</h2>
-        <p>
-            You can use 2 functions:
+        You can use 2 functions:
         <pre>
 //returns an array of the colors and icons
 iconify.iconify()
@@ -673,7 +692,6 @@ iconify.iconify()
 // returns the HTML of the icons
 iconify.getIcons()
 </pre>
-        </p>
     </section>
 
     <footer>
@@ -688,16 +706,17 @@ iconify.getIcons()
 </div>
 <script>
     var input = document.querySelector('#input');
-    var btnSubmit = document.querySelector('#btnSubmit');
     var output = document.querySelector('#output');
+    var examples = document.querySelectorAll('.example');
 
-    input.addEventListener('keyup', function (e) {
-        if (e.keyCode == 13) {
+    examples.forEach(function (example) {
+        example.addEventListener('click', function (e) {
+            input.value = e.target.innerHTML;
             hash(input.value);
-        }
+        });
     });
 
-    btnSubmit.addEventListener('click', function () {
+    input.addEventListener('keyup', function (e) {
         hash(input.value);
     });
 
