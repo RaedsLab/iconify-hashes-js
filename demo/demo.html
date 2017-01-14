@@ -20,10 +20,12 @@
 
 <script src="../dist/iconify-hashes-js.js"></script>
 <script>
-    const out = document.querySelector('#output');
-    const icons = iconify.getIcons('479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041');
+    var out = document.querySelector('#output');
+    var icons = iconify.getIcons('479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041');
     out.innerHTML = icons;
-    console.table(icons);
+
+    var iconsArray = iconify.iconify('479d724e535f50888568ebf69fac58ef3ab3ba25d16d89618672d3b36e6a2041');
+    console.log(iconsArray);
 </script>
 </body>
 </html>
